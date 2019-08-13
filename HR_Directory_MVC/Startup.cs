@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using HR_Directory_MVC.Models;
 
 namespace HR_Directory_MVC
 {
@@ -22,6 +24,9 @@ namespace HR_Directory_MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<HR_Directory_MVCContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("HR_Directory_MVCContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
