@@ -1,0 +1,100 @@
+﻿@page
+@model HR_Directory_MVC.Pages.Employee.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.HireDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.HireDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.EmployedOrNot)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.EmployedOrNot)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.TerminationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.TerminationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.Department)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.Department)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.Supervisor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.Supervisor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.PhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.PhoneNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.PayRate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.PayRate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.Certifications)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.Certifications)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ployee.PermissionLevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ployee.PermissionLevel)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Employee.EmployeeID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
